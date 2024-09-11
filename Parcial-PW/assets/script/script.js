@@ -20,32 +20,43 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-// Testiomonial slides
+// Initialize animations AOT
 
-let slideIndex = 0;
+document.addEventListener('DOMContentLoaded', function(){
+    AOS.init();
+});
 
-function setupSlides() {slides = document.querySelectorAll('.testimonio');
+// Functions for any carousel
+
+function setupSlides(selector, displayIndex) {
+    let slides = document.querySelectorAll(selector);
     slides.forEach(slide => {
         slide.style.display = 'none';
     });
-    slides[slideIndex].style.display = 'block';
+    slides[displayIndex].style.display = 'block';
 }
 
-function moveSlide(n) {
-    const slides = document.querySelectorAll('.testimonio');
-    slideIndex += n;
-    if(slideIndex >= slides.length) slideIndex = 0;
-    if(slideIndex < 0) slideIndex = slides.length = -1;
-    setupSlides();
+function moveSlide(selector, increment) {
+    let slides = document.querySelectorAll(selector);
+    let slideIndex = parseInt(document.querySelector(selector).getAttribute('data-slide-index')) || 0;
+    slideIndex += increment;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    document.querySelector(selector).setAttribute('data-slide-index', slideIndex.toString());
+    setupSlides(selector, slideIndex);
 }
+
+// Testimonial slides 
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupSlides();
-    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+    setupSlides('.testimonio', 0);
+    document.querySelector('.prev').addEventListener('click', () => moveSlide('.testimonio', -1));
+    document.querySelector('.next').addEventListener('click', () => moveSlide('.testimonio', 1));
+
 });
 
-// NUmber of items in the cart
+// Number of items in the cart
 
 document.addEventListener('DOMContentLoaded', function(){
     let cartCount = 0;

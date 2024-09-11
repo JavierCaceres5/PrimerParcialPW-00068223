@@ -1,224 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Link para iconos del menu-->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!--Link para fuentes de texto-->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mystery+Quest&family=Shadows+Into+Light&display=swap" rel="stylesheet">  <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="text/JavaScript" src="assets/script/script.js"></script>
-  <title>Café de mi pueblo</title>
-</head>
-<body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="nav-div">
-        <div class="logo">
-          <div class="nav-icon">
-            <img src="assets/images/coffee-icon.png" alt="Cafe mi pueblo logo" class="nav-logo">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link para iconos del menu-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Link para fuentes de texto-->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mystery+Quest&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!--Link para css-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--Link para archivo JS-->
+    <script type="text/JavaScript" src="assets/script/script.js"></script>
+    <!--Link para ,libreria de animacion de scroll-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <title>Café de mi pueblo</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-div">
+          <div class="logo">
+            <div class="nav-icon">
+              <a href="index.html"><img src="assets/images/coffee-icon.png" alt="Cafe mi pueblo logo"></a>
+            </div>
           </div>
-          <a href="index.html">CAFÉ DE MI PUEBLO</a>
-        </div>
           <div class="navbar-toggle"><i class="bx bx-menu"></i></div>
-      </div>
-        <ul class="nav-links">
-          <li><a href="#beneficios-cafe"><i class="bx bxs-coffee-bean"></i>Beneficios</a></li>
-          <li><a href="#caracteristicas-cafe"><i class="bx bx-message-alt-dots"></i>Características</a></li>
-          <li><a href="#producto-cafe"><i class="bx bxs-purchase-tag-alt"></i>Producto</a></li>
-          <li><a href="#testimonios-cafe"><i class="bx bx-wink-smile"></i>Reseñas</a></li>
-          <li><a href="#footer-cafe"><i class="bx bxs-download"></i>Más información</a></li>
-          <li><a href="#"><i class="bx bx-cart bx-lg"></i><span id="cart-count">0</span></a></li>
-      </ul>
-    </nav> 
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>No es solo café. Es inspiración y felicidad.</h1>
-        <p>Descubre lo que es el placer en cada sorbo con el café de más alta calidad</p>
-        <a href="#" class="hero-button">Comprar Ahora</a>
-      </div>
-    </section>
-    <section id="beneficios-cafe">
-      <h1>Descubre Los Beneficios Del Café De Mi Pueblo</h1>
-      <div class="beneficio-container">
-          <div class="beneficio">
+        </div>
+        <div class="toggle-container">
+          <ul class="nav-links">
+            <li>
+              <a href="#beneficios-cafe">
+                <div class="menu-item"><i class="bx bxs-coffee-bean"></i>Beneficios</div>
+              </a>
+            </li>
+            <li>
+              <a href="#caracteristicas-cafe">
+                <div class="menu-item"><i class="bx bx-message-alt-dots"></i>Características</div>
+              </a>
+            </li>
+            <li>
+              <a href="#producto-cafe">
+                <div class="menu-item"><i class="bx bxs-purchase-tag-alt"></i>Producto</div>
+              </a>
+            </li>
+            <li>
+              <a href="#testimonios-cafe">
+                <div class="menu-item"><i class="bx bx-wink-smile"></i>Reseñas</div>
+              </a>
+            </li>
+            <li>
+              <a href="#footer-cafe">
+                <div class="menu-item"><i class="bx bxs-download"></i>Más información</div>
+              </a>
+            </li>
+            <li>
+              <a href="compra.html">
+                <div class="menu-item"><i class="bx bx-cart"></i><span id="cart-count">0</span></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>No es solo café. Es inspiración y felicidad.</h1>
+          <p>Descubre lo que es el placer en cada sorbo con el café de más alta calidad</p>
+          <a href="#producto-cafe" class="hero-button">Comprar Ahora</a>
+        </div>
+      </section>
+      <section id="beneficios-cafe">
+        <div class="beneficio-container">
+        <h1>Descubre los beneficios de tomar un buen café </h1>
+        <div class="beneficio-grid">
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Energía Al Instante</h2>
             <img src="assets/images/beneficios-section/beneficio1.png" alt="Mejora la energia y concentracion">
-            <div class="benef-text">
-              <h2>Energía Al Instante</h2>
+            <div class="overlay-text">
               <p> Siente el vigor rejuvenecedor con cada sorbo. Nuestro café está diseñado para darte un impulso de energía que revitaliza tu mente y cuerpo, ayudándote a afrontar el día con claridad y concentración sin precedentes.</p>
             </div>
           </div>
-          <div class="beneficio">
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Mejor Humor En Cada Taza</h2>
             <img src="assets/images/beneficios-section/beneficio2.jpg" alt="Mejora el ánimo">
-            <div class="benef-text">
-              <h2>Mejor Humor En Cada Taza</h2>
+            <div class="overlay-text">
               <p>Eleva tu estado de ánimo y combate la tristeza con nuestro café rico en aroma. Perfecto para esos días grises, nuestro café es un rayo de sol en cada taza.</p>
             </div>
           </div>
-          <div class="beneficio">
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Afilado Mental</h2>
             <img src="assets/images/beneficios-section/beneficio3.jpg" alt="Mejora la función cognitiva">
-            <div class="benef-text">
-              <h2>Afilado Mental</h2>
+            <div class="overlay-text">
               <p>El café de Mi Pueblo mejora tu función cerebral, aumentando tu memoria, velocidad de reacción, y habilidades cognitivas para que siempre estés al máximo de tus capacidades.</p>
             </div>
           </div>
-          <div class="beneficio">
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Escudo Contra Enfermedades</h2>
             <img src="assets/images/beneficios-section/beneficio4.jpg" alt="Reduce riesgo de enfermedades">
-            <div class="benef-text">
-              <h2>Escudo Contra Enfermedades</h2>
+            <div class="overlay-text">
               <p>Nuestro café no solo deleita tu paladar, sino que también puede ayudar a reducir el riesgo de enfermedades neurodegenerativas como Alzheimer y Parkinson.</p>
             </div>
           </div>
-          <div class="beneficio">
-            <img src="assets/images/beneficios-section/beneficio5.png" alt="Rico en antioxidantes">
-            <div class="benef-text">
-              <h2>Antioxidantes Abundantes</h2>
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Antioxidantes Abundantes</h2>
+            <img src="assets/images/beneficios-section/beneficio8.jpg" alt="Rico en antioxidantes">
+            <div class="overlay-text">
               <p>Combate el envejecimiento con antioxidantes que protegen tus células. Disfruta de un café que cuida de ti tanto por dentro como por fuera.</p>
             </div>
           </div>
-          <div class="beneficio">
-            <img src="assets/images/beneficios-section/beneficio6.jpg" alt="Aumenta el rendimiento físico">
-            <div class="benef-text">
-              <h2>Potenciador De Rendimiento Físico</h2>
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Potenciador De Rendimiento Físico</h2>
+            <img src="assets/images/beneficios-section/beneficio5.png" alt="Aumenta el rendimiento físico">
+            <div class="overlay-text">
               <p>Lleva tus límites al extremo. El café de Mi Pueblo es el compañero perfecto para tus rutinas de ejercicio y en la vida diaria.</p>
             </div>
           </div>
-          <div class="beneficio">
-            <img src="assets/images/beneficios-section/beneficio7.jpg"alt="Ayuda en la quema de grasa">
-            <div class="benef-text">
-              <h2>Aliado en la Pérdida de Peso</h2>
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Aliado en la Pérdida de Peso</h2>
+            <img src="assets/images/beneficios-section/beneficio6.jpg"alt="Ayuda en la quema de grasa">
+            <div class="overlay-text">
               <p>Apoya tu jornada de bienestar con una opción natural para mantener tu peso. Nuestro café estimula tu metabolismo, ayudando a tu cuerpo a quemar grasa de manera más eficiente.</p>
             </div>
           </div>
-          <div class="beneficio">
+          <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+            <h2>Prevención De Diabetes</h2>
             <img src="assets/images/beneficios-section/beneficio8.jpg" alt="Disminuye el riesgo de diabetes">
-            <div class="benef-text">
-              <h2>Prevención De Diabetes</h2>
+            <div class="overlay-text">
               <p>Disfruta sin culpas. Beber nuestro café puede estar asociado con un menor riesgo de desarrollar diabetes tipo 2, permitiéndote disfrutar de la vida al máximo.</p>
             </div>
-      </div>
-    </section>
-    <section id="caracteristicas-cafe">
-      <h1>Características de nuestro café</h1>
-      <div class="caracteristicas-container">
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica1.jpg" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Cuerpo Balanceado</h2>
-            <p>Posee una textura suave y aterciopelada que es perfecta para cualquier momento del día.</p>
           </div>
         </div>
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica2.jpg" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Café 100% Bourbon Rojo</h2>
-            <p>Comprometidos con la sostenibilidad, nuestro café proviene de fincas que practican métodos de cultivo ecológicos, asegurando no solo la calidad sino también el respeto por el medio ambiente.</p>
+      </section>
+      <section id="caracteristicas-cafe">
+        <h1>Características de nuestro café</h1>
+        <div class="caracteristicas-container">
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica1.jpg" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Cuerpo Balanceado</h2>
+              <p>Posee una textura suave y aterciopelada que es perfecta para cualquier momento del día.</p>
+            </div>
+          </div>
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica2.jpg" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Café 100% Bourbon Rojo</h2>
+              <p>Comprometidos con la sostenibilidad, nuestro café proviene de fincas que practican métodos de cultivo ecológicos, asegurando no solo la calidad sino también el respeto por el medio ambiente.</p>
+            </div>
+          </div>
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica3.jpg" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Café De Media Altura</h2>
+              <p>Nuestro café proviene de cultivos de media altura, ofreciendo un perfil de sabor único que resalta la dulzura natural, ideal para los amantes del buen café.</p>
+            </div>
+          </div>
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica4.png" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Aroma Envolvente</h2>
+              <p>Disfruta de un aroma profundo y envolvente con notas de chocolate y caramelo, un preludio perfecto a la experiencia de sabor que ofrece cada sorbo.</p>
+            </div>
+          </div>
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica5.jpg" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Textura Ideal</h2>
+              <p> La molienda fina de nuestro café Bourbon facilita una extracción óptima, resultando en una bebida suave pero robusta, ideal para métodos de preparación como espresso o cafetera de filtro.</p>
+            </div>
+          </div>
+          <div class="caracteristica">
+            <img src="assets/images/caracteristicas-section/caracteristica6.jpg" alt="Cuerpo balanceado">
+            <div class="carac-text">
+              <h2>Experiencia garantizada</h2>
+              <p>Cada paquete de nuestro café Bourbon molido representa nuestro compromiso con la calidad. Garantizamos una experiencia cafetera superior, satisfaciendo desde el paladar más exigente hasta el bebedor casual de café.</p>
+            </div>
           </div>
         </div>
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica3.jpg" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Café De Media Altura</h2>
-            <p>Nuestro café proviene de cultivos de media altura, ofreciendo un perfil de sabor único que resalta la dulzura natural, ideal para los amantes del buen café.</p>
+      </section>
+      <section id="producto-cafe">
+        <h1>Nuestro Café</h1>
+        <div class="coffee-container">
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
+          </div>
+          <div class="cafe">
+            <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
+            <div class="coffee-info">
+              <h2>Café Premium</h2>
+              <p>Sabor intenso y aroma envolvente</p>
+              <p><strong>Precio:</strong> $5.99</p>
+              <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
+            </div>
           </div>
         </div>
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica4.png" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Aroma Envolvente</h2>
-            <p>Disfruta de un aroma profundo y envolvente con notas de chocolate y caramelo, un preludio perfecto a la experiencia de sabor que ofrece cada sorbo.</p>
+      </section>
+      <section id="testimonios-cafe">
+        <h1>Testimonios De Clientes</h1>
+        <div class="testimonios-slider" data-slide-index="0">
+          <div class="testimonio">
+            <img src="assets/images/testimonios-section/pp1.png" alt="Foto de Juan Recinos" class="testimonio-image">
+            <blockquote>
+              <p>"La calidad del café es sobresaliente. ¡Es perfecto para comenzar el día!"</p>
+              <cite>Juan Recinos</cite>
+            </blockquote>
           </div>
-        </div>
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica5.jpg" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Textura Ideal</h2>
-            <p> La molienda fina de nuestro café Bourbon facilita una extracción óptima, resultando en una bebida suave pero robusta, ideal para métodos de preparación como espresso o cafetera de filtro.</p>
-          </div>
-        </div>
-        <div class="caracteristica">
-          <img src="assets/images/caracteristicas-section/caracteristica6.jpg" alt="Cuerpo balanceado">
-          <div class="carac-text">
-            <h2>Experiencia garantizada</h2>
-            <p>Cada paquete de nuestro café Bourbon molido representa nuestro compromiso con la calidad. Garantizamos una experiencia cafetera superior, satisfaciendo desde el paladar más exigente hasta el bebedor casual de café.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="producto-cafe">
-      <h1>Nuestro Café</h1>
-      <div class="coffee-container">
-        <div class="cafe">
-          <img src="assets/images/product-section/cafe.jpg" alt="Café Premium">
-          <div class="coffee-info">
-            <h2>Café Premium</h2>
-            <p>Sabor intenso y aroma envolvente</p>
-            <p><strong>Precio:</strong> $5.99</p>
-            <button class="buy-button" onclick="openPurchaseTab()">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="testimonios-cafe">
-      <h1>Testimonios De Clientes</h1>
-      <div class="testimonios-slider">
-        <div class="testimonio">
-          <img src="assets/images/testimonios-section/pp1.png" alt="Foto de Rafel Gutiérrez" class="testimonio-image">
-          <blockquote>
-            <p>"La calidad del café es sobresaliente. ¡Es perfecto para comenzar el día!"</p>
-            <cite>Juan Recinos</cite>
-          </blockquote>
-        </div>
-        <div class="testimonio">
-          <img src="assets/images/testimonios-section/pp2.jpg" alt="Foto de Julio Cáceres" class="testimonio-image">
+          <div class="testimonio">
+            <img src="assets/images/testimonios-section/pp2.jpg" alt="Foto de Julio Cáceres" class="testimonio-image">
             <blockquote>
               <p>"¡Impresionante! El aroma y el sabor del café son consistentes y cada taza es un verdadero placer. Es, sin duda, mucho mejor que Starbucks y esas empresas que venden un mal café"</p>
               <cite>Julio Cáceres</cite>
             </blockquote>
-        </div>
-        <div class="testimonio">
-          <img src="assets/images/testimonios-section/pp3.png" alt="Foto de Karla Abrego" class="testimonio-image">
+          </div>
+          <div class="testimonio">
+            <img src="assets/images/testimonios-section/pp3.png" alt="Foto de Karla Abrego" class="testimonio-image">
             <blockquote>
               <p>"El café es aceptable, aunque esperaba un sabor un poco más intenso. No está mal, pero creo que hay espacio para mejorar en términos de sabor y aroma."</p>
               <cite>Karla Abrego</cite>
             </blockquote>
-        </div>
-        <div class="testimonio">
-          <img src="assets/images/testimonios-section/pp4.png" alt="Foto de Luis Merino" class="testimonio-image">
+          </div>
+          <div class="testimonio">
+            <img src="assets/images/testimonios-section/pp4.png" alt="Foto de Luis Merino" class="testimonio-image">
             <blockquote>
               <p>"Cada vez que compro café de aquí, sé que estoy obteniendo calidad. La atención al detalle y el cuidado en su producción se nota en cada taza. ¡Totalmente recomendado!"</p>
               <cite>Luis Merino</cite>
             </blockquote>
+          </div>
+        </div>
+        <button class="prev" onclick="moveslide(-1)">&#10094;</button>
+        <button class="next" onclick="moveslide(1)">&#10095;</button>
+      </section>
+    </main>
+    <footer class="footer" id="footer-cafe">
+      <div class="footer-content">
+        <div class="footer-section contact">
+          <h3>Ponte en contacto con nosotros</h3>
+          <p>Términos y condiciones | Política de privacidad</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Visita Café de mi pueblo</h3>
+          <a href="#">Café de mi pueblo</a>
+        </div>
+        <div class="footer-section brands">
+          <p>Café de mi pueblo® es una marca registrada de Doreña</p>
+        </div>
+        <div class="footer-section social-media">
+          <a href="https://www.instagram.com/javier.caceres5/" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100009571839034&locale=es_LA" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
+          <a href="https://x.com/javi_caceres05" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
+          <a href="https://github.com/JavierCaceres5" target="_blank" class="social-icon"><i class="bx bxl-github"></i></a>
         </div>
       </div>
-      <button class="prev" onclick="moveslide(-1)">&#10094;</button>
-      <button class="next" onclick="moveslide(1)">&#10095;</button>
-  </main>
-  <footer class="footer" id="footer-cafe">
-    <div class="footer-content">
-      <div class="footer-section contact">
-        <h3>Ponte en contacto con nosotros</h3>
-        <p>Términos y condiciones | Política de privacidad</p>
+      <div class="footer-bottom">
+        © 2024 Café de mi pueblo | Diseñado por Javier Cáceres
       </div>
-      <div class="footer-section social">
-        <h3>Visita Café de mi pueblo</h3>
-        <a href="#">Café de mi pueblo</a>
-      </div>
-      <div class="footer-section brands">
-        <p>Café de mi pueblo® es una marca registrada de Doreña</p>
-      </div>
-      <div class="footer-section social-media">
-        <a href="https://www.instagram.com/javier.caceres5/" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100009571839034&locale=es_LA" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
-        <a href="https://x.com/javi_caceres05" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
-        <a href="https://github.com/JavierCaceres5" target="_blank" class="social-icon"><i class="bx bxl-github"></i></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2024 Café de mi pueblo | Diseñado por Javier Cáceres
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

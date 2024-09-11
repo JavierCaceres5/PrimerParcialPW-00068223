@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +9,20 @@
 body {
   min-height: 100vh;
   font-family: "Cairo", sans-serif;
-  display: flex;
-  flex-direction: column;
-  background-color: #D7CCC8;
-  padding-top: 140px;
+  display: block;
+  background-color: #f3f0ec;
 }
 
+h1:not(.hero-content h1) {
+  font-family: 'Montserrat', sans-serif;
+  color: #4E342E;
+  font-weight: 700;
+  font-size: 4em;
+  text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 /* Encabezado y barra de navegacion */
 
 header {
@@ -28,8 +38,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #494240;
   padding: 20px;
-  background-color: #D7CCC8;
   z-index: 1001;
 }
 
@@ -42,65 +52,80 @@ header {
 
 .navbar-toggle {
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 20px;
   display: none;
   cursor: pointer;
   font-size: 35px;
-  order: 2;
+  height: 70px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-}
-
-.logo a {
-  text-decoration: none;
-  font-size: 40px;
-  font-weight: bold;
-  color: #333;
-  font-family: "Mystery Quest", system-ui;
-}
-
-.nav-logo {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-}
-
-.nav-links {
-  width: 100%;
-  padding-left: 15px;
-  display: flex;
-  align-items: center;
-  list-style: none;
-  transition: all 0.3s ease;
-}
-
-.nav-links li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #4B2C20;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  background-color: #D2691E;
-  color: #fff;
+  margin-right: 10px;
 }
 
 .nav-icon {
   order: 3;
 }
 
+.nav-icon a {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.nav-icon a img{
+  width: 100px;
+  height: 100px;
+}
+
 .bx {
+  color: white;
   font-size: 40px;
+}
+
+.nav-links {
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  margin-right: 10px;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: whitesmoke;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.menu-item i {
+  margin-right: 10px;
+}
+
+.nav-links li a i{
+  font-size: 1.5em;
+  margin-left: 0.3em;
+}
+
+.nav-links li a:hover {
+  background-color: #D2691E;
+  color: #fff;
 }
 
 /* Responsive */
@@ -110,17 +135,23 @@ header {
   body {
     padding-top: 100px;
   }
+
   .nav-div {
     flex-direction: column;
     align-items: flex-start;
     z-index: 1002;
   }
-  .nav-logo {
+  
+  .nav-icon a{
     order: 1;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
+  .nav-icon a img {
+    width: 70px;
+    height: 70px;
+  }
   .logo {
     z-index: 1003;
   }
@@ -130,6 +161,7 @@ header {
   }
 
   .nav-links {
+    width: 100%;
     display: none;
     position: fixed;
     top: 0;
@@ -139,24 +171,44 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D7CCC8;
+    list-style: none;
+    padding-left: 10px;
+    background-color: #494240;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    transform: translateX(-100%);
-    opacity: 0;
+    transform: translateX(0);
+    opacity: 1;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
 
   .nav-links li {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-links li a{
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: left;
+    margin: 0 auto;
   }
   
+  .menu-item {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 230px;
+  }
+
+  .menu-item i {
+    margin-right: 10px;
+  }
+
   .navbar-toggle {
     display: block;
     z-index: 1003;
@@ -199,7 +251,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D7CCC8;
+    list-style: none;
+    background-color: #494240;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transform: translateX(-100%);
@@ -209,6 +262,30 @@ header {
 
   .nav-links li {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .menu-item {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 365px;
+  }
+
+  .menu-item i {
+    margin-right: 10px;
   }
   
   .navbar-toggle {
@@ -243,7 +320,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/backgrounds/product-background.jpg);
+  background-image: url(../images/backgrounds/hero.jpg);
   background-size: cover;
   background-position: center;
   filter: brightness(50%) blur(2px);
@@ -282,87 +359,104 @@ header {
 /* Seccion beneficios */
 
 #beneficios-cafe {
-  position: relative;
-  background-image: none;
-  overflow: hidden;
-  padding-top: 150px;
-  padding-bottom: 80px;
-}
- 
-#beneficios-cafe h1{
-  font-family: "Shadows Into Light", cursive;
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 150px 0;
 }
 
-.beneficio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
+.beneficio-grid {
+  display: grid;
+  grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+  gap: 5px;
+  padding: 5px;
 }
 
-.beneficio {
+.beneficio-item {
   position: relative;
-  width: 300px;
-  cursor: pointer;
-  overflow: hidden;
+  text-align: center;
+  margin: 20px auto;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: #dfd3c3;
+  overflow: hidden;
+  width: 95%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.beneficio img {
+.beneficio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ece0d1;
+}
+
+.beneficio-item h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  margin: -20px -20px 0px -30px;
+  padding: 10px 0;
+}
+
+.beneficio-item img {
   width: 100%;
-  height: 300px;
+  filter: brightness(80%) blur(2px);
+  height: 800px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
-.benef-text p {
-  margin-top: 10px;
-}
-
-.beneficio .benef-text {
+.overlay-text {
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: -100%;
+  left: 0;
   right: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transition: left 0.3s ease;
-  font-size: 16px;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.beneficio:hover .benef-text {
-  left: 0;
+.beneficio-item:hover .overlay-text {
+  opacity: 1;
 }
 
-.beneficio:hover img {
-  transform: scale(1.05);
+.beneficio-item:hover img {
+  opacity: 0.3;
+}
+
+.overlay-text p {
+  font-size: 2em;
+  text-align: center;
+  justify-content: center;
+
+}
+
+@media (min-width: 768px) {
+  .beneficio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .beneficio-item {
+    width: 80%;
+  }
 }
 
 @media (min-width: 1024px) {
-  .beneficio-container {
-    justify-content: space-between;
+  .beneficio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
-  .beneficio {
-    width: 23%;
+  .beneficio-item {
+    width: 75%;
   }
 }
 
@@ -398,16 +492,6 @@ header {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-#caracteristicas-cafe h1{
-  font-family: "Shadows Into Light", cursive;
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
-  text-align: center;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -451,10 +535,8 @@ header {
 
 #producto-cafe {
   position: relative;
-  background-image: none;
-  overflow: hidden;
-  padding-top: 150px;
-  padding-bottom: 80px;
+  background: #f0f0f0;
+  padding: 150px 0
 }
 
 #producto-cafe::before {
@@ -464,74 +546,69 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/backgrounds/product-background.jpg);
+  background-image: url(../images/backgrounds/product-background.jpg) no-repeat center center;
   background-size: cover;
-  background-position: center;
-  filter: brightness(50%) blur(3px);
+  opacity: 0.5;  
   z-index: -1;
 }
 
-#producto-cafe h1{
-  font-family: "Shadows Into Light", cursive;
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .coffee-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .cafe {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0,3s ease-in-out;
   padding: 20px;
-  margin: 20px;
   text-align: center;
 }
 
 .cafe img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 
 .cafe:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6x 12px rgba(0, 0, 0, 0.15);
 }
 
 .coffee-info h2 {
-  font-size: 24px;
-  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
 }
 
 .coffee-info p {
-  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
 }
 
 .buy-button {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 10px 20px;
-  background-color: #D2691E;
-  color: white;
+  background-color: #c0392b;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
-  transform: scale(1.05);
   background-color: #b85c17;
 }
+
 /* Seccion de testimonios */
 
 #testimonios-cafe {
@@ -557,16 +634,6 @@ header {
   background-position: center;
   filter: brightness(80%) blur(2px);
   z-index: -1;
-}
-
-#testimonios-cafe h1{
-  font-family: "Shadows Into Light", cursive;
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 2px, 2px, 4px, rgba(0, 0, 0, 0.5);
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .testimonio-slider {
@@ -639,7 +706,7 @@ header {
 /* Footer */
 
 .footer {
-  background-color: #D7CCC8;
+  background-color: #494240;
   color: #333;
   text-align: center;
   padding: 50px 0;
@@ -661,11 +728,11 @@ header {
 .footer-section h3 {
   margin-bottom: 10px;
   font-size: 24px;
-  color: #4B2C20;
+  color: whitesmoke;
 }
 
 .footer-section a, .footer-section p {
-  color: #333;
+  color: whitesmoke;
   font-size: 20px;
   text-decoration: none;
   line-height: 1.6;
@@ -680,7 +747,6 @@ header {
 
 .social-icon {
   display: inline-block;
-  color: #333;
   font-size: 24px;
   transition: color 0.3s;
 }
@@ -691,7 +757,8 @@ header {
 
 .footer-bottom {
   padding: 10px;
-  border-top: 1px solid #4B2C20;
+  border-top: 1px solid #494240;
+  color: whitesmoke;
   font-size: 14px;
 }
 
